@@ -1,5 +1,5 @@
-from pimonitor.cu.PMCUContext import PMCUContext
-from pimonitor.cu.PMCUParameter import PMCUParameter
+from subssm.cu.PMCUContext import PMCUContext
+from subssm.cu.PMCUParameter import PMCUParameter
 
 __author__ = 'citan'
 

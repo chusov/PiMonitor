@@ -10,8 +10,8 @@ import platform
 
 import pygame
 
-from pimonitor.PM import PM
-from pimonitor.PMUtils import PMUtils
+from subssm.PM import PM
+from subssm.PMUtils import PMUtils
 
 
 class PMScreen(object):

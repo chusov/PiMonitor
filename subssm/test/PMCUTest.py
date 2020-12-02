@@ -1,12 +1,12 @@
-from pimonitor.PMXmlParser import PMXmlParser
-from pimonitor.cu.PMCUContext import PMCUContext
+from subssm.PMXmlParser import PMXmlParser
+from subssm.cu.PMCUContext import PMCUContext
 
 __author__ = 'citan'
 
 import unittest
 
-from pimonitor.PMDemoConnection import PMDemoConnection
-from pimonitor.PM import PM
+from subssm.PMDemoConnection import PMDemoConnection
+from subssm.PM import PM
 
 class PMCUTestCase(unittest.TestCase):
 

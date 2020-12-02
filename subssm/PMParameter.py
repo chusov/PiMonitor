@@ -6,7 +6,7 @@ Created on 29-03-2013
 
 import re
 
-from pimonitor.PMPacket import PMPacket
+from subssm.PMPacket import PMPacket
 
 
 class PMParameter(object):

@@ -1,4 +1,4 @@
-from pimonitor.cu.PMCUParameter import PMCUParameter
+from subssm.cu.PMCUParameter import PMCUParameter
 
 __author__ = 'citan'
 

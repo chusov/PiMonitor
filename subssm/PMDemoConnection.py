@@ -3,8 +3,8 @@ Created on 29-03-2013
 
 @author: citan
 """
-from pimonitor.PM import PM
-from pimonitor.PMPacket import PMPacket
+from subssm.PM import PM
+from subssm.PMPacket import PMPacket
 import random
 import time
 

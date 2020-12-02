@@ -1,6 +1,6 @@
-from pimonitor.cu.PMCUAddress import PMCUAddress
-from pimonitor.cu.PMCUParameter import PMCUParameter
-from pimonitor.cu.PMCUStandardParameter import PMCUStandardParameter
+from subssm.cu.PMCUAddress import PMCUAddress
+from subssm.cu.PMCUParameter import PMCUParameter
+from subssm.cu.PMCUStandardParameter import PMCUStandardParameter
 
 __author__ = 'citan'
 

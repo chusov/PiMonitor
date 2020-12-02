@@ -7,14 +7,14 @@ Created on 29-03-2013
 import xml.sax
 import os.path
 
-from pimonitor.PM import PM
-from pimonitor.cu.PMCUAddress import PMCUAddress
-from pimonitor.cu.PMCUCalculatedParameter import PMCUCalculatedParameter
-from pimonitor.cu.PMCUConversion import PMCUConversion
-from pimonitor.cu.PMCUFixedAddressParameter import PMCUFixedAddressParameter
-from pimonitor.cu.PMCUParameter import PMCUParameter
-from pimonitor.cu.PMCUStandardParameter import PMCUStandardParameter
-from pimonitor.cu.PMCUSwitchParameter import PMCUSwitchParameter
+from subssm.PM import PM
+from subssm.cu.PMCUAddress import PMCUAddress
+from subssm.cu.PMCUCalculatedParameter import PMCUCalculatedParameter
+from subssm.cu.PMCUConversion import PMCUConversion
+from subssm.cu.PMCUFixedAddressParameter import PMCUFixedAddressParameter
+from subssm.cu.PMCUParameter import PMCUParameter
+from subssm.cu.PMCUStandardParameter import PMCUStandardParameter
+from subssm.cu.PMCUSwitchParameter import PMCUSwitchParameter
 
 # <parameter id="P1" name="Engine Load (Relative)" desc="P1" ecubyteindex="8" ecubit="7" target="1">
 # <address>0x000007</address>

@@ -5,7 +5,7 @@ Created on 22-04-2013
 """
 
 import pygame
-from pimonitor.cu.PMCUParameter import PMCUParameter
+from subssm.cu.PMCUParameter import PMCUParameter
 
 
 class PMSingleWindow(object):
