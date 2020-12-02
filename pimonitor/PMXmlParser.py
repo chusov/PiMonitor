@@ -62,13 +62,13 @@ class PMXmlParser(xml.sax.ContentHandler):
 
     def parse(self, file_name):
         self._message = 'Parsing XML data'
-        self._log_id = PM.log(self._message)
+        print(self._message)
 
         file_path = os.path.join("data", file_name)
         source = open(file_path)
         xml.sax.parse(source, self)
         self.log_progress()
-        PM.log(self._message + " [DONE]")
+        print(self._message + " [DONE]")
 
         return self._parameters
 
@@ -89,7 +89,7 @@ class PMXmlParser(xml.sax.ContentHandler):
 
             for (k, v) in attrs.items():
                 if k == "id":
-                    print 'protocol ' + v
+                    print(f'protocol {v}')
                     self._proto_id = v
 
         if self._proto_id != "SSM":
@@ -222,5 +222,5 @@ class PMXmlParser(xml.sax.ContentHandler):
             self.log_progress()
 
     def log_progress(self):
-        PM.log(self._message + " " + str(self._element_no) + " elements, " + str(len(self._parameters)) + " parameters",
+        print(self._message + " " + str(self._element_no) + " elements, " + str(len(self._parameters)) + " parameters",
                self._log_id)

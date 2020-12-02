@@ -26,7 +26,7 @@ class PMConnection(object):
             # port='/dev/tty.usbserial-000013FA',
             baudrate=4800,
             timeout=2000,
-            writeTimeout=55,
+            writeTimeout=1,
             parity=serial.PARITY_NONE,
             stopbits=serial.STOPBITS_ONE,
             bytesize=serial.EIGHTBITS)
