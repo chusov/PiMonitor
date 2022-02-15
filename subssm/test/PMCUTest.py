@@ -52,12 +52,12 @@ class PMCUTestCase(unittest.TestCase):
         self.prepare_2_init_connection()
         parser = PMXmlParser()
 
-        self._parameters = parser.parse("logger_METRIC_EN_v263.xml")
+        self._parameters = parser.parse("logger_METRIC_EN_v362.xml")
 
         self._parameters = sorted(self._parameters, key=lambda x: x.get_id(), reverse=True)
 
         self.assertIsNotNone(self._parameters)
-        self.assertEqual(len(self._parameters), 716)
+        self.assertEqual(len(self._parameters), 621)
 
     def prepare_4_match_parameters(self):
         self.prepare_3_parse_logger_definition()
@@ -65,7 +65,7 @@ class PMCUTestCase(unittest.TestCase):
         self._ecu_context = PMCUContext(self._ecu_packet, [1, 3])
         self._ecu_parameters = self._ecu_context.match_parameters(self._parameters)
         self.assertIsNotNone(self._ecu_parameters)
-        self.assertEqual(len(self._ecu_parameters), 125)
+        self.assertEqual(len(self._ecu_parameters), 92)
 
         self._ecu_switch_parameters = self._ecu_context.match_switch_parameters(self._parameters)
         self.assertIsNotNone(self._ecu_switch_parameters)
@@ -88,20 +88,20 @@ class PMCUTestCase(unittest.TestCase):
         self.assertIsNotNone(self._tcu_calculated_parameters)
         self.assertEqual(len(self._tcu_calculated_parameters), 0)
 
-        #TODO: switches
 
     def test_5_read_parameters(self):
         self.prepare_4_match_parameters()
 
-        print self._ecu_parameters[120].to_string()
-        packet = self._connection.read_parameter(self._ecu_parameters[120])
-        value = self._ecu_parameters[120].get_value(packet)
-        print 'value=' + value
+        print(self._ecu_parameters[82].to_string())
+        packet = self._connection.read_parameter(self._ecu_parameters[82])
+        value = self._ecu_parameters[82].get_value(packet)
+        print(f'value={value}')
 
     def log(self, message, mid):
-        print message
+        print(message)
 
         return mid
+
 
 if __name__ == '__main__':
     unittest.main()
