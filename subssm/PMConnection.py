@@ -22,8 +22,8 @@ class PMConnection(object):
 
     def open(self):
         self._ser = serial.Serial(
-            port='/dev/ttyUSB0',
-            # port='/dev/tty.usbserial-000013FA',
+            #port='/dev/ttyUSB0',
+            port='/dev/tty.usbserial-A50285BI',
             baudrate=4800,
             timeout=2000,
             writeTimeout=1,
@@ -58,7 +58,7 @@ class PMConnection(object):
             # read size
             sizebytes = self._ser.read()
             data.append(sizebytes[0])
-            size = ord(sizebytes[0])
+            size = sizebytes[0]
 
             # read data
             tmp = self._ser.read(size)
@@ -66,7 +66,7 @@ class PMConnection(object):
 
             # read checksum
             data.extend(self._ser.read())
-            data = map(ord, data)
+            #data = map(ord, data)
 
             out_packet = PMPacket.from_array(data)
             data = []
